@@ -1,0 +1,15 @@
+{
+    "appbartitle": "Заметки",
+    "appbarseacrch": "Поиск...",
+    "infobar": "Все заметки",
+    "noinfobar": "Нет заметок",
+    "list": "Список",
+    "grid": "Сетка",
+    "titlewindow": "Добавить заметку",
+    "titlewindowedit": "Изменить заметку",
+    "editbtn": "РЕДАКТИРОВАТЬ",
+    "deledit": "Удалить",
+    "closebtn": "Отмена",
+    "addbtn": "Добавить",
+    "editwindowbtn": "изменить"
+}
