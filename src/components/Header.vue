@@ -17,7 +17,7 @@
                 <button class="header__back" @click="header = true">
                     <img src="@/assets/images/back.svg" alt="">
                 </button>
-                <input v-model="search" type="text" class="header__input" placeholder="Qidirish...">
+                <input v-model="search" type="text" class="header__input" :placeholder="$t('appbarseacrch')">
                 <button class="header__close">
                     <img src="@/assets/images/exit.svg" alt="">
                 </button>
@@ -43,7 +43,8 @@
         },
         methods: {
             changeLang() {
-                this.lang = localStorage.lang = localStorage.lang == 'ru' ? 'uz' : 'ru'
+                this.$i18n.locale = this.lang = localStorage.lang = 
+                localStorage.lang == 'ru' ? 'uz' : 'ru'
             }
         },
         created() {

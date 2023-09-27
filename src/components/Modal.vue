@@ -13,9 +13,9 @@
                 </label>
             </form>
             <div class="modal__buttons">
-                <button class="modal__btn del" @click="$emit('close')">Bekor qilish</button>
-                <button class="modal__btn edit" @click="close" v-if="!edit">Qo’shish</button>
-                <button class="modal__btn edit" @click="saveNote()" v-else>O'zgartirish</button>
+                <button class="modal__btn del" @click="$emit('close')">{{ $t('closebtn') }}</button>
+                <button class="modal__btn edit" @click="close" v-if="!edit">{{ $t('addbtn') }}</button>
+                <button class="modal__btn edit" @click="saveNote()" v-else>{{ $t('editwindowbtn') }}</button>
             </div>
         </div>
     </div>
