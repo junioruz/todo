@@ -1,11 +1,11 @@
 <template>
     <div class="modal" @click="$emit('close')">
         <div class="modal__window" @click.stop>
-            <h2 class="modal__title">{{ edit ? "Eslatma o'zgartirish" : "Eslatma qo’shish" }}</h2>
+            <h2 class="modal__title">{{ edit ? $t('titlewindowedit') : $t('titlewindow') }}</h2>
             <form action="" class="modal__form">
                 <label for="">
                     <span>Title</span>
-                    <input type="text" placeholder="Title" v-model="title">
+                    <input type="text" placeholder="Title" v-model="title"> 
                 </label>
                 <label for="">
                     <span>Text</span>

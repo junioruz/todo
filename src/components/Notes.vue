@@ -1,11 +1,11 @@
 <template>
     <div class="notes container">
         <div class="notes__top">
-            <h2 class="notes__title">Barcha eslatmalar</h2>
+            <h2 class="notes__title">{{ $t('infobar') }}</h2>
             <button class="notes__btn" @click="grid = !grid">
                 <img src="@/assets/images/royxat.svg" alt="" v-if="grid" />
                 <img src="@/assets/images/grid.svg" alt="" v-else />
-                <span>{{ grid ? "Ro'yxat" : "Setka" }}</span>
+                <span>{{ grid ? $t('list') : $t('grid') }}</span>
             </button>
         </div>
         <div class="notes__list" :class="{ active: grid }">

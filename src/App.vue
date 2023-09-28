@@ -107,8 +107,17 @@ export default {
 
   },
 
+  watch: {
+    notes: {
+      handler(value) {
+        localStorage.setItem('todoDate', JSON.stringify(this.notes))
+      },
+      deep: true
+    }
+  },
+
   created() {
-    if(JSON.parse(localStorage.todoDate).length != 0){
+    if(localStorage.notes){
       let localTodo = JSON.parse(localStorage.todoDate)
       this.notes = localTodo
       newId = localTodo[localTodo.length-1].id + 1
@@ -117,16 +126,8 @@ export default {
     }
     this.filteredNotes = this.notes
     localStorage.lang = localStorage.lang == undefined ? 'ru' : localStorage.lang
-  },
-  watch: {
-    notes: {
-      handler(value) {
-        localStorage.setItem('todoDate', JSON.stringify(this.notes))
-      },
-      deep: true
-    }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped></style>

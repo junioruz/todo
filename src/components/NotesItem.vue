@@ -14,11 +14,11 @@
         <div class="notes__item-buttons">
             <button class="notes__item-btn edit" @click="$emit('changeNote', note.id)">
                 <img src="@/assets/images/pen.svg" alt="">
-                <span>O'ZGARTIRISH</span>
+                <span>{{ $t('editbtn') }}</span>
             </button>
             <button class="notes__item-btn del" @click=" $emit('delNote', note.id)">
                 <img src="@/assets/images/delete.svg" alt="">
-                <span>o'chirish</span>
+                <span>{{ $t('deledit') }}</span>
             </button>
         </div>
     </div>

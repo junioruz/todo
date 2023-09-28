@@ -6,7 +6,7 @@
                 <button class="header__lang" @click="changeLang">
                     {{ lang }}
                 </button>
-                <h1 class="header__title">Eslatmalar</h1>
+                <h1 class="header__title">{{ $t('appbartitle') }}</h1>
                 <button class="header__search" @click="header = false">
                     <img src="@/assets/images/search.svg" alt="">
                 </button>
@@ -43,8 +43,7 @@
         },
         methods: {
             changeLang() {
-                this.$i18n.locale = this.lang = localStorage.lang = 
-                localStorage.lang == 'ru' ? 'uz' : 'ru'
+                this.$i18n.locale = this.lang = localStorage.lang = localStorage.lang == 'ru' ? 'uz' : 'ru'
             }
         },
         created() {
